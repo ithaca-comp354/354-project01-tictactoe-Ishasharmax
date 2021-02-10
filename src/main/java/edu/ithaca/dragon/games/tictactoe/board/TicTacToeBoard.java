@@ -16,6 +16,9 @@ public interface TicTacToeBoard {
     //@throws IllegalArgumentException if square is taken or symbol is invalid
     //@post places the given symbol in the given sqaure, if both are valid
     public void setSquare(Pair<Integer, Integer> square, char symbol);
+
+    //@returns the char found at the given square
+    public char checkSquare(Pair<Integer, Integer> square);
     
     //@returns a string representing the entire board for display, including coordinates
     public String displayString();

@@ -26,10 +26,11 @@ public class HumanPlayer implements TicTacToePlayer {
         }
     }
 
-    public static Pair<Integer, Integer> readAndVerifyCoords(String coordString){
+    public static Pair<Integer, Integer> readAndVerifyCoords(String coordString) {
         //TODO: needs error checking, shoud return null if input is invalid
+        if (!coordString.matches("\\d{1},\\d{1}"))
+            return null;
         String[] coords = coordString.split(",");
         return new Pair<>(Integer.valueOf(coords[0]), Integer.valueOf(coords[1]));
     }
-    
 }
